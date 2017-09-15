@@ -1,0 +1,22 @@
+
+	<p>Online tool for Oracle Data Integration 10g & 11g password string decryption</p>
+	<form>
+		<div class="form-group row">
+			<label for="encrytedText" class="col-sm-3 col-form-label">Encrypted String </label>
+			<div class="col-sm-6">
+				<input id="encrytedText" type="text" ng-model="encryptedStr"
+					placeholder="encrypted string" class="col-sm-12" />
+			</div>
+			<div class="col-sm-1">
+				<a href="#" class="btn btn-default" ng-click="decrypt()">Decrypt</a>
+			</div>
+		</div>
+		<div class="alert alert-danger" role="alert" ng-if="errorMsg">{{errorMsg}}</div>
+		<div class="form-group row">
+			<label for="encrytedText" class="col-sm-3 col-form-label">Decrypted String</label>
+			<div class="col-sm-6">
+				<input id="decryptedText" type="text" readonly
+					ng-model="decryptedStr" class="col-sm-6" />
+			</div>
+		</div>
+	</form>
