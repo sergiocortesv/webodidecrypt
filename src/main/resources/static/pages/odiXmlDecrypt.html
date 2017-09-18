@@ -1,0 +1,22 @@
+<p>Online tool for Oracle Data Integration 10g & 11g xml connection string decryption</p>
+<form name="form">
+    <div class="form-group row">
+        <label for="file" class="col-sm-3 col-form-label">ODI snps_login_work.xml file : </label>
+        <div class="btn btn-default" ngf-select ng-model="file" name="file" ngf-max-size="2MB" ngf-pattern=".xml">Select</div>
+        {{file.name}}
+        <i ng-show="form.file.$error.required">*required</i>
+    </div>
+    <div>
+        <a class="btn btn-default" ng-disabled="!form.$valid" ng-click="submit()">Decrypt File</a>        
+    </div>
+</form>
+
+<div ng-repeat="val in snpLogins">
+    {{val.loginName}}
+    <ul>
+        <li>LoginUser : {{val.loginUser}}</li>
+        <li>LoginPass : {{val.loginPassword}}</li>
+        <li>LoginDbuser : {{val.loginDbUser}}</li>
+        <li>LoginDbpass : {{val.loginDbPassword}}</li>
+    </ul>
+</div>
