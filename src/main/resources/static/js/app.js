@@ -54,3 +54,14 @@ myApp.config(['$locationProvider', '$routeProvider', function($locationProvider,
   });
   $locationProvider.hashPrefix('');
 }]);
+
+myApp.directive('snpLoginDisplay',function(){
+   return{
+        restrict: 'AE',
+        templateUrl: 'directives/snpLogin.html',
+        replace: true,
+        scope:{
+            snpLoginObj: '='
+        }
+   };
+});

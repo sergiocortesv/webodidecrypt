@@ -11,12 +11,4 @@
     </div>
 </form>
 
-<div ng-repeat="val in snpLogins">
-    {{val.loginName}}
-    <ul>
-        <li>LoginUser : {{val.loginUser}}</li>
-        <li>LoginPass : {{val.loginPassword}}</li>
-        <li>LoginDbuser : {{val.loginDbUser}}</li>
-        <li>LoginDbpass : {{val.loginDbPassword}}</li>
-    </ul>
-</div>
+<snp-login-display snp-login-obj="snpLogin" ng-repeat='snpLogin in snpLogins'/>
