@@ -1,6 +1,6 @@
 
 	<p>Online tool for Oracle Data Integration 10g & 11g password string decryption</p>
-	<form>
+	
 		<div class="form-group row">
 			<label for="encrytedText" class="col-sm-3 col-form-label">Encrypted String </label>
 			<div class="col-sm-6">
@@ -8,7 +8,7 @@
 					placeholder="encrypted string" class="col-sm-12" />
 			</div>
 			<div class="col-sm-1">
-				<a href="#" class="btn btn-default" ng-click="decrypt()">Decrypt</a>
+				<a class="btn btn-default" ng-click="decrypt()">Decrypt</a>
 			</div>
 		</div>
 		<div class="alert alert-danger" role="alert" ng-if="errorMsg">{{errorMsg}}</div>
@@ -19,11 +19,10 @@
 					ng-model="decryptedStr" class="col-sm-6" />
 			</div>
 		</div>
-	</form>
 	
 	<div class="bs-callout bs-callout-info">
     	<h4>Locate ODI encrypted strings</h4>
     	<p>ODI encrypted strings are located on the snps_login_work.xml file and on the master repository database. 
-    	   Copy the desired encrypted string on to the Encrypted String field of this page and then press the Decrypt button
+    	   Copy the encrypted string on to the encrypted String field of this page and then press the Decrypt button
     	</p>
     </div>
